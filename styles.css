@@ -1,0 +1,12 @@
+form {
+    display: flex;
+  }
+
+ 
+  .div {
+    flex-direction: column; gap: 10px; max-width: 200px; margin-bottom: 10px;
+  }
+
+  .text-box{
+   height: 250px; width: 600px; padding-top: 10px;
+  }
