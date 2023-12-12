@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resume Helper</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-  <h1>Build Your Best Resume</h1>
-    <form action="/generate-points" method="post"> 
-        <div class = "div">
-            <label for="roleName">Enter Title & Company Name</label>
-            <input type="text" id="roleName" name="roleName" placeholder="Analyst at Deloitte">
+    <div class="container">
+        <div class="form-section">
+            <form action="/generate-points" method="POST">
+                <input type="text" name="roleName" placeholder="Analyst at Deloitte"><br>
+                <textarea name="roleDescription" label="roleDescription"></textarea><br>
+                <button type="submit" id="submitRole"name="submitRole">Submit</button>
+            </form>
         </div>
-    
-        <div class = "div">
-            <textarea class="text-box" id="roleAccomplishments" name="roleAccomplishments" placeholder="- Increased signups by 10%... "></textarea>   
-            <button id="submitRole" type="submit">Submit</button>
+        <div class="results-section">
+            <p id="results"></p>
         </div>
-  </form>
-  <p id="results"></p>
+    </div>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

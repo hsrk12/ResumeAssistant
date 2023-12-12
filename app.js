@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
 
 app.post('/generate-points', async (req, res) => {
     var title = req.body.roleName;
-    var description = req.body.roleAccomplishments;
+    var description = req.body.roleDescription;
     res.json(await gpt(title, description))
     
   });
@@ -33,6 +33,6 @@ async function gpt(role, accomp) {
       model: "gpt-4-0314",
     });
   
-    console.log(completion.choices[0]);
+    //console.log(completion.choices[0]);
     return completion.choices[0]?.message?.content;
   } 
