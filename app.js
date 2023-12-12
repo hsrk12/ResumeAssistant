@@ -29,7 +29,7 @@ app.post('/generate-points', async (req, res) => {
 
 async function gpt(role, accomp) {
     const completion = await openai.chat.completions.create({
-      messages: [{ role: "system", content: "You are a job search expert and a seasoned recruiter. Based on the following job title and list of achievements in the role, come up with 2 strong bullet points (double line sentence is preferred) for the role. The bullet points shoud be coherent and adequately describe the candidate's capabilities. " + role + ": " + accomp}],
+      messages: [{ role: "system", content: "You are a job search expert and a seasoned recruiter. Based on the following job title and list of achievements in the role, come up with 2 strong bullet points (double line sentence is preferred) for the role. The bullet points shoud be coherent and adequately describe the candidate's capabilities. " + role + ": " + accomp + "make sure to keep all the quantitative metrics and role specific terminology used in the description."}],
       model: "gpt-4-0314",
     });
   
